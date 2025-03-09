@@ -1,14 +1,21 @@
 'use client';
-
-import React from 'react';
+import Link from 'next/link';
 
 interface SectionProps {
   title: string;
   description: string;
   points: string[];
+  link: string;
+  linkText: string;
 }
 
-const Section: React.FC<SectionProps> = ({ title, description, points }) => {
+const Section: React.FC<SectionProps> = ({
+  title,
+  description,
+  points,
+  link,
+  linkText,
+}) => {
   return (
     <div className="bg-gray-100 dark:bg-gray-800 p-6 rounded-xl shadow-lg">
       <h2 className="text-2xl font-semibold mb-2 text-gray-900 dark:text-white">
@@ -20,13 +27,23 @@ const Section: React.FC<SectionProps> = ({ title, description, points }) => {
           <li key={index}>{point}</li>
         ))}
       </ul>
+      <div className="mt-4">
+        <Link
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:underline"
+        >
+          {linkText}
+        </Link>
+      </div>
     </div>
   );
 };
 
 const Page: React.FC = () => {
   return (
-    <div dir="rtl" className="min-h-screen  p-6">
+    <div dir="rtl" className="min-h-screen p-6">
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-center mb-8">
           الفرق بين Web3، Blockchain، و Bitcoin
@@ -40,6 +57,8 @@ const Page: React.FC = () => {
               'يعتمد على العقود الذكية والتطبيقات اللامركزية (dApps).',
               'يوفر مزيدًا من الخصوصية والأمان.',
             ]}
+            link="https://ethereum.org/en/web3/"
+            linkText="تعلم المزيد عن Web3"
           />
           <Section
             title="🔗 Blockchain - التقنية الأساسية"
@@ -49,6 +68,8 @@ const Page: React.FC = () => {
               'آمنة وغير قابلة للتعديل بعد تسجيل المعاملات.',
               'تُستخدم في مجالات عديدة، مثل التمويل وسلاسل التوريد.',
             ]}
+            link="https://www.ibm.com/topics/what-is-blockchain"
+            linkText="تعلم المزيد عن Blockchain"
           />
           <Section
             title="💰 Bitcoin - العملة الرقمية الأولى"
@@ -58,46 +79,9 @@ const Page: React.FC = () => {
               'محدود بـ 21 مليون بيتكوين فقط.',
               'يُستخدم كمخزن للقيمة وأداة استثمارية.',
             ]}
+            link="https://bitcoin.org/en/how-it-works"
+            linkText="تعلم المزيد عن Bitcoin"
           />
-        </div>
-        <div>
-          <div>
-            ما هو البلوك تشين
-            <p>
-              البلوك تشين هو تقنية حديثة تُستخدم لتخزين البيانات بشكل موزع وآمن.
-              تعتبر البلوك تشين العمود الفقري للعملات الرقمية مثل بيتكوين
-              وإيثيريوم، ولكن يمكن استخدامها أيضًا في العديد من التطبيقات الأخرى
-              مثل سلاسل الإمداد
-            </p>
-            <p>
-              البلوك تشين هو سلسلة من الكتل التي تحتوي على معلومات مشفرة، وكل
-              كتلة ترتبط بالكتلة السابقة بشكل غير قابل للتعديل. هذا يخلق سلسلة
-              من البيانات المرتبطة بشكل دائم وآمن. يتم تخزين هذه السلسلة عبر
-              شبكة موزعة من أجهزة الكمبيوتر (تسمى العقد)، مما يجعل البلوك تشين
-              مقاومًا للتلاعب أو التغيير.
-            </p>
-          </div>
-          <div>
-            مكونات البلوك تشين
-            <p>الكتل</p>
-            <p>التجزئة </p>
-            <p>لعقد </p>
-            <p>آليات الإجماع</p>
-          </div>
-          <div>
-            خصائص البلوك تشين
-            <p></p>
-            <p></p>
-            <p></p>
-            <p></p>
-          </div>
-          <div>
-            كيف يعمل البلوك تشين
-            <p></p>
-          </div>
-          <div>التطبيقات الرئيسية للبلوك تشين</div>
-          <div>ماذا يحل البلوك تشين ؟</div>
-          <div>مزايا البلوك تشين</div>
         </div>
       </div>
     </div>

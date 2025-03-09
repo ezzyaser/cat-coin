@@ -4,9 +4,10 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/Navbar';
 
 export const metadata: Metadata = {
-  title: 'KRYPT',
-  description: 'Learn and investment in crypto',
-  icons: '/Images/logo.png',
+  title: 'CatCoin',
+  description:
+    'تعلم عن العملات الرقمية والبلوك تشين وقُم بالاستثمار في عملتنا طويلة الأمد. واستمتع😍',
+  icons: '/Images/logo.jpg',
 };
 
 export default function RootLayout({
@@ -15,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="gradient-bg-welcome">
+    <html lang="ar" suppressHydrationWarning={true}>
+      <body className="">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

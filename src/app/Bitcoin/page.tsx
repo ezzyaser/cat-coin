@@ -1,114 +1,115 @@
-import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
 
-export default function page() {
+export default function Page() {
   return (
-    <div dir="rtl">
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold text-center mb-6">ما هو البتكوين؟</h1>
-        <p className="text-lg mb-6">
-          البتكوين هو أول عملة رقمية لامركزية تم اختراعها في عام 2008 بواسطة شخص
-          أو مجموعة مجهولة تحت اسم "ساتوشي ناكاموتو". تم تقديمه عبر ورقة بيضاء
-          (White Paper) بعنوان "Bitcoin: A Peer-to-Peer Electronic Cash System"
-          التي وضحت فكرة البتكوين وكيفية عمله كعملة رقمية لا تحتاج إلى طرف ثالث
-          (مثل البنوك) لإجراء المعاملات المالية.
-        </p>
+    <div
+      dir="rtl"
+      className="bg-gray-100 dark:bg-gray-900 min-h-screen text-gray-900 dark:text-gray-100"
+    >
+      <div className="max-w-4xl mx-auto px-4 py-8 space-y-6">
+        <Card>
+          <CardContent className="p-6">
+            <h1 className="text-3xl font-bold text-center mb-4">
+              ما هو البتكوين؟
+            </h1>
+            <p className="text-lg">
+              البتكوين هو أول عملة رقمية لامركزية تم اختراعها في عام 2008 بواسطة
+              شخص أو مجموعة مجهولة تحت اسم ساتوشي ناكاموتو.
+            </p>
+          </CardContent>
+        </Card>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">كيف يعمل البتكوين:</h2>
-        <ul className="list-disc pl-6">
-          <li>
-            <strong>اللامركزية:</strong> البتكوين ليس ملكًا لأية حكومة أو مؤسسة
-            مالية، بل يعتمد على شبكة لامركزية من الحواسيب التي تُسمى "العُقد"
-            (Nodes). كل عقدة تحتفظ بنسخة من السجل الكامل لجميع المعاملات.
-          </li>
-          <li>
-            <strong>البلوكتشين:</strong> البلوكتشين هو عبارة عن سجل عام مفتوح
-            يتكون من سلسلة من الكتل (Blocks)، كل كتلة تحتوي على مجموعة من
-            المعاملات.
-          </li>
-          <li>
-            <strong>التعدين:</strong> للحصول على بتكوين، يتم "تعدينه" من خلال
-            عملية رياضية معقدة باستخدام الحواسيب.
-          </li>
-          <li>
-            <strong>الحد الأقصى للعرض:</strong> البتكوين محدود في العدد بحد أقصى
-            21 مليون وحدة.
-          </li>
-        </ul>
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">كيف يعمل البتكوين:</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                <strong>اللامركزية:</strong> البتكوين ليس ملكًا لأية حكومة أو
+                مؤسسة مالية.
+              </li>
+              <li>
+                <strong>البلوكتشين:</strong> سجل عام مفتوح يتكون من سلسلة من
+                الكتل.
+              </li>
+              <li>
+                <strong>التعدين:</strong> عملية رياضية معقدة باستخدام الحواسيب.
+              </li>
+              <li>
+                <strong>الحد الأقصى للعرض:</strong> 21 مليون وحدة فقط.
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          تاريخ بداية البتكوين:
-        </h2>
-        <ul className="list-decimal pl-6">
-          <li>
-            <strong>2008: بداية الفكرة:</strong> نشر ساتوشي ناكاموتو الورقة
-            البيضاء.
-          </li>
-          <li>
-            <strong>2009: إطلاق الشبكة:</strong> تم استخراج أول "كتلة" في
-            البتكوين بواسطة ساتوشي ناكاموتو.
-          </li>
-          <li>
-            <strong>2010: أول معاملة تجارية:</strong> شراء بيتزا بمبلغ 10,000
-            بتكوين.
-          </li>
-          <li>
-            <strong>2017: الارتفاع الكبير في السعر:</strong> وصل إلى حوالي
-            20,000 دولار أمريكي.
-          </li>
-          <li>
-            <strong>اليوم:</strong> أصبح البتكوين واحدًا من أكثر الأصول قيمة في
-            العالم.
-          </li>
-        </ul>
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">
+              تاريخ بداية البتكوين:
+            </h2>
+            <ul className="list-decimal pl-6 space-y-2">
+              <li>
+                <strong>2008:</strong> نشر الورقة البيضاء.
+              </li>
+              <li>
+                <strong>2009:</strong> إطلاق الشبكة.
+              </li>
+              <li>
+                <strong>2010:</strong> أول معاملة تجارية.
+              </li>
+              <li>
+                <strong>2017:</strong> ارتفاع السعر.
+              </li>
+              <li>
+                <strong>اليوم:</strong> أصبح من الأصول القيمة عالميًا.
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          كيفية استخدام البتكوين:
-        </h2>
-        <ul className="list-disc pl-6">
-          <li>
-            التحويلات المالية: يمكن استخدام البتكوين لتحويل الأموال بين الأفراد
-            أو الشركات.
-          </li>
-          <li>
-            الاستثمار: يعتبر البتكوين من الأصول التي يُستثمر فيها الكثير من
-            الأفراد والشركات.
-          </li>
-          <li>
-            الشراء عبر الإنترنت: بعض المتاجر والمواقع تقبل الدفع باستخدام
-            البتكوين.
-          </li>
-        </ul>
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">
+              كيفية استخدام البتكوين:
+            </h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>التحويلات المالية.</li>
+              <li>الاستثمار.</li>
+              <li>الشراء عبر الإنترنت.</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">مميزات البتكوين:</h2>
-        <ul className="list-disc pl-6">
-          <li>
-            اللامركزية: لا يحتاج البتكوين إلى وسطاء أو مؤسسات مالية لتسيير
-            المعاملات.
-          </li>
-          <li>الخصوصية: المعاملات تتم بشكل مجهول إلى حد كبير.</li>
-          <li>
-            التحويلات عبر الحدود: يمكن للبتكوين أن يسهل التحويلات المالية بين
-            الأشخاص من مختلف أنحاء العالم.
-          </li>
-        </ul>
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">مميزات البتكوين:</h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>اللامركزية.</li>
+              <li>الخصوصية.</li>
+              <li>التحويلات عبر الحدود.</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        <h2 className="text-2xl font-semibold mt-8 mb-4">
-          التحديات والانتقادات:
-        </h2>
-        <ul className="list-disc pl-6">
-          <li>التقلبات السعرية: قيمة البتكوين تتذبذب بشكل كبير.</li>
-          <li>
-            التعدين واستهلاك الطاقة: عملية التعدين تتطلب طاقة كهربائية كبيرة.
-          </li>
-          <li>
-            التنظيم: بعض الحكومات تعمل على فرض قيود أو حظر استخدام البتكوين.
-          </li>
-        </ul>
+        <Card>
+          <CardContent className="p-6">
+            <h2 className="text-2xl font-semibold mb-4">
+              التحديات والانتقادات:
+            </h2>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>التقلبات السعرية.</li>
+              <li>التعدين واستهلاك الطاقة.</li>
+              <li>التنظيم.</li>
+            </ul>
+          </CardContent>
+        </Card>
 
-        <p className="mt-6 text-lg">
-          إجمالًا، البتكوين ليس مجرد عملة رقمية، بل هو مشروع ثوري يهدف إلى تغيير
-          النظام المالي العالمي.
-        </p>
+        <Card>
+          <CardContent className="p-6 text-center">
+            <p className="text-lg">
+              إجمالًا، البتكوين مشروع ثوري يهدف إلى تغيير النظام المالي العالمي.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
