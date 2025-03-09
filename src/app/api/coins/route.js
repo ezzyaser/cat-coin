@@ -5,6 +5,7 @@ export async function GET() {
     const res = await fetch("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd");
 
     if (!res.ok) {
+      console.error(`Failed to fetch data: ${res.status} ${res.statusText}`);
       return NextResponse.json({ error: "Failed to fetch data" }, { status: res.status });
     }
 
@@ -18,6 +19,7 @@ export async function GET() {
       },
     });
   } catch (error) {
+    console.error("Internal Server Error:", error);
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
