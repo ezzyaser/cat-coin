@@ -16,8 +16,8 @@ interface DonationBoxProps {
 }
 
 export default function Footer() {
-  const walletAddress: string = 'HKnxtvyxJQ7wTNFpJEqx5JHsm4AhQerazNR43foSgUZs';
-  const [copied, setCopied] = useState<boolean>(false);
+  const walletAddress = 'HKnxtvyxJQ7wTNFpJEqx5JHsm4AhQerazNR43foSgUZs';
+  const [copied, setCopied] = useState(false);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(walletAddress);
@@ -26,8 +26,8 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white py-8 mt-10 text-center transition-colors duration-300 px-6">
-      <div className="max-w-screen-md mx-auto flex flex-col items-center">
+    <footer className="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white py-8 mt-10 text-center px-4 sm:px-6 transition-colors duration-300">
+      <div className="max-w-screen-md mx-auto flex flex-col items-center space-y-6">
         <SocialLinks />
         <DonationBox
           walletAddress={walletAddress}
@@ -40,11 +40,11 @@ export default function Footer() {
 }
 
 const SocialLinks: React.FC = () => (
-  <>
+  <div className="w-full">
     <p className="text-lg mb-4 text-gray-700 dark:text-gray-300">
       مواقع التواصل
     </p>
-    <div className="flex justify-center space-x-6 mb-5">
+    <div className="flex justify-center flex-wrap gap-4 mb-5">
       <SocialIcon
         href="https://t.me/ammaryasserp"
         icon={<FaTelegram size={32} />}
@@ -58,7 +58,7 @@ const SocialLinks: React.FC = () => (
         hoverColor="hover:text-blue-400"
       />
     </div>
-  </>
+  </div>
 );
 
 const SocialIcon: React.FC<SocialIconProps> = ({
@@ -82,11 +82,11 @@ const DonationBox: React.FC<DonationBoxProps> = ({
   copyToClipboard,
   copied,
 }) => (
-  <div className="max-w-md mx-auto p-4 bg-gray-800 text-white rounded-2xl shadow-lg text-center">
+  <div className="w-full max-w-xs sm:max-w-md p-4 bg-gray-800 text-white rounded-2xl shadow-lg text-center">
     <div className="flex items-center justify-center mb-3 text-pink-500 text-lg font-semibold">
       <FaHeart className="mr-2" size={22} /> دعم الموقع
     </div>
-    <div className="p-3 bg-gray-900 rounded-lg flex items-center justify-between">
+    <div className="p-3 bg-gray-900 rounded-lg flex items-center justify-between overflow-hidden">
       <span className="text-sm truncate">{walletAddress}</span>
       <button
         onClick={copyToClipboard}
