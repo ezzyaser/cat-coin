@@ -36,7 +36,7 @@ export default function Page() {
   return (
     <motion.div
       dir="rtl"
-      className="max-w-screen-lg mx-auto px-4 py-10 bg-gradient-to-b from-indigo-900 to-gray-900 dark:from-gray-900 dark:to-black text-gray-900 dark:text-gray-100 rounded-lg shadow-2xl"
+      className="max-w-screen-lg mx-auto px-4 py-10 mt-20 bg-gradient-to-b from-indigo-900 to-gray-900 dark:from-gray-900 dark:to-black text-gray-900 dark:text-gray-100 rounded-lg shadow-2xl"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
     >
